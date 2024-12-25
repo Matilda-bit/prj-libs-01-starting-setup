@@ -1,2 +1,11 @@
+# Node.js modules
 node_modules
+
+# Build output
 dist
+
+# Configuration files
+src/conf
+
+# Environment variables
+.env

@@ -1,5 +1,10 @@
 const path = require('path');
 
+require('dotenv').config();
+
+const webpack = require('webpack');
+
+
 module.exports = {
   mode: 'development',
   entry: './src/app.ts',
@@ -26,5 +31,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js']
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+        'process.env': JSON.stringify(process.env),
+    }),
+],
 };
