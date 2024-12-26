@@ -49,7 +49,6 @@ async function searchAddressHandler(event: Event) {
         if (response.data.status !== 'OK') {
             throw new Error('Could not fetch location!');
         }
-
         const coordinates = response.data.results[0].geometry.location;
 
         await loadGoogleMapsApi();
