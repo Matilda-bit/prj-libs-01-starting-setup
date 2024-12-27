@@ -9,7 +9,8 @@ console.log('Google API Key:', GOOGLE_API_KEY);
 const form = document.querySelector('form')!;
 const addressInput = document.getElementById('address')! as HTMLInputElement;
 
-declare var google: any;
+// declare var google: any; // don't need this we install types/google.maps
+//added to dependecies
 
 type GoogleGeocodingResponse  = {
     results: {geometry: {location: {lat: number, lng: number}}}[];
