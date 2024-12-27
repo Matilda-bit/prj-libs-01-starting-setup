@@ -61,7 +61,7 @@ async function searchAddressHandler(event: Event) {
 
         const map = new Map(document.getElementById('map') as HTMLElement, {
             center: { lat: coordinates.lat, lng: coordinates.lng },
-            zoom: 10,
+            zoom: 16,
             mapId: addressInput.value,
         });
 
